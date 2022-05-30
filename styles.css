@@ -62,6 +62,28 @@ section{
     margin: 0 auto;
 }
 
+.btn-gradient{
+    background-image: var(--gradient-color);
+}
+
+.btn-gradient:hover{
+    background-image: var(--gradient-color-alt);
+}
+
+.btn-purple{
+    background-color: var(--purple-solid);
+}
+
+.btn-purple:hover{
+    background-color: #56247f;
+}
+
+.dots{
+    font-size: 2.4rem;
+    margin-left: .5rem;
+    opacity: .75;
+}
+
 
 /* Header styles */
 .header{
@@ -187,7 +209,7 @@ section{
     font-family: 'Courgette', cursive;
 }
 
-.btn-gradient{
+/* .btn-gradient{
     background-image: var(--gradient-color);
 }
 
@@ -198,7 +220,7 @@ section{
 .dots{
     font-size: 2.4rem;
     margin-left: .5rem;
-    opacity: .75;
+    opacity: .75; */
 }
 
 /* Booking section styles */
@@ -233,15 +255,119 @@ section{
     resize: none;
 }
 
+::placeholder {
+    color: inherit;
+}
+
 .form-btn{
     margin-top: 2.5rem;
     cursor: pointer;
 }
 
-.btn-purple{
-    background-color: var(--purple-solid);
+/* Featured hotels section styles */
+.section-head{
+    text-align: center;
+    margin-bottom: 5rem;
 }
 
-.btn-purple:hover{
-    background-color: #56247f;
+.heading{
+    display: block;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+
+.sub-heading{
+    font-size: 1.7rem;
+    font-family: 'Courgette', cursive;
+    color: #a5a5a5;
+    font-weight: 300;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 2.5rem;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.featured-hotels{
+    height: 35rem;
+    color: white;
+    padding: 1rem;
+    position: relative;
+    z-index: 0;
+}
+
+.featured-hotels::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--purple-transparent-alt);
+    z-index: -1;
+}
+
+.hotel-image{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -2;
+}
+
+.hotel-image{
+    font-size: 2.6rem;
+}
+
+.hotel-price{
+    font-size: 1.8rem;
+}
+
+.hotel-rating{
+    margin: 1rem 0 2.5rem;
+}
+
+.rating{
+    color: var(--yellow-solid);
+}
+
+/* Special section styles */
+.offer{
+    background: linear-gradient(to right,rgba(250, 158,44,.8), rgba(143,80,251,.8)), url("./images/the_paradise_bg.jpg") bottom center no-repeat;
+    background-size: cover;
+}
+
+.offer-content{
+    background-color: white;
+    text-align: center;
+    padding: 5rem 1rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.discount{
+    background-color: var(--yellow-solid);
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    outline: 2px solid var(--yellow-solid);
+    outline-offset: .5rem;
+}
+
+.paragraph{
+    color: #a5a5a5;
+    margin-bottom: 2.5rem;
 }
